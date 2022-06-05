@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles/style.css">
+    <script src="https://kit.fontawesome.com/ab02b7ab99.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="full-page">
+        <div class="search-container">
+            <div class="cities">
+                <button class="city-name">Kyiv</button>
+                <button class="city-name">New York</button>
+                <button class="city-name">London</button>
+                <button class="city-name">Paris</button>
+                <button class="city-name" id="current-button">Current city</button>
+            </div>
+            <div class="search-line">
+                <form id="city-input">
+                    <input type="text" placeholder="Enter your city" id="enterCity" autofocus>
+                    <button type="submit" class="fa-button"><i class="fa fa-search"></i></button>
+                </form>
+            </div>
+            <div class="top-buttons">
+                <button class="icon-top-set"><i class="fa-solid fa-gear top-right-icon"></i></button>
+                <button class="icon-top-mes"><i class="fa-solid fa-message top-right-icon"></i></button>
+            </div>
+        </div>
+        <div class="main-container">
+            <div class="main-info">
+                <div class="box-info">
+                    <div class="degrees-info">
+                        <div class="current-degrees-day">
+                            <span class="temperature" id="temperature"></span>
+                            <span class="units"><a href="#" id="cel-link">°C</a>|<a href="#" id="far-link">°F</a>
+                            </span>
+                        </div>
+                        <div class="current-degrees-night"><span id="night-temp"></span> °C</div>
+                    </div>
+                    <div class="city-info">
+                        <div class="current-city" id="current-city"></div>
+                        <div class="current-day" id="current-day"></div>
+                    </div>
+                    <div class="date-info">
+                        <div class="current-time" id="timeNow"></div>
+                        <div class="current-date" id="dateNow"></div>
+                    </div>
+                </div>
+                <div class="additional-info">
+                    <div class="precipitation">Precipitation: <span id="precipitation"></span>%</div>
+                    <div class="wind">Wind: <span id="wind"></span>km/h</div>
+                </div>
+                <div class="five-days-after">
+                    <div class="frst-day">
+                        <div class="next-day-name">Thu</div>
+                        <div class="next-icon">☀️</div>
+                        <div class="next-degrees">21 °C</div>
+                    </div>
+                    <div class="snd-day">
+                        <div class="next-day-name2">Fri</div>
+                        <div class="next-icon2">🌤</div>
+                        <div class="next-degrees2">19 °C</div>
+                    </div>
+                    <div class="thrd-day">
+                        <div class="next-day-name3">Sat</div>
+                        <div class="next-icon3">⛈</div>
+                        <div class="next-degrees3">17 °C</div>
+                    </div>
+                    <div class="frth-day">
+                        <div class="next-day-name4">Sun</div>
+                        <div class="next-icon4">🌦</div>
+                        <div class="next-degrees4">18 °C</div>
+                    </div>
+                    <div class="ffth-day">
+                        <div class="next-day-name5">Mon</div>
+                        <div class="next-icon5">☀️</div>
+                        <div class="next-degrees5">20 °C</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <div class="learn-more">
+                <button type="button" class="btn btn-link">Learn more <i class="fa-solid fa-arrow-right"></i></button>
+            </div>
+        </div>
+    </div>
+    <script src="/scripts/index.js"></script>
+</body>
+
+</html>

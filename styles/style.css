@@ -1,0 +1,187 @@
+* {
+    box-sizing: border-box;
+    color: #22313f;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.full-page {
+    width: 600px;
+    display: block;
+    margin: 50px auto;
+    background: #e4f1fe;
+    border: 1px solid grey;
+    border-radius: 10px;
+}
+
+.search-container {
+    padding: 20px;
+    position: relative;
+}
+
+.cities {
+    margin-bottom: 10px;
+    margin-left: 30px;
+}
+
+.city-name {
+    display: inline;
+    margin-right: 10px;
+    border: none;
+    background: none;
+}
+
+form {
+    position: relative;
+    width: 95%;
+    margin: 0 auto;
+}
+
+input,
+.fa-search,
+.fa-button {
+    border: none;
+    outline: none;
+    border-radius: 5px;
+}
+
+input {
+    width: 100%;
+    height: 42px;
+    background: linear-gradient(to top, #dfe9f3 0%, white 100%);
+    padding-left: 15px;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+button .btn-link,
+.fa-button {
+    height: 26px;
+    width: 26px;
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    background: none;
+    cursor: pointer;
+}
+
+button.fa-button:before {
+    font-size: 10px;
+}
+
+.top-buttons {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    cursor: pointer;
+}
+
+.icon-top-mes,
+.icon-top-set {
+    border: none;
+    background: none;
+}
+
+.main-container {
+    display: inline-block;
+}
+
+.main-info {
+    width: 600px;
+    text-align: center;
+}
+
+.box-info {
+    display: table;
+    margin: 0 auto;
+    width: 90%;
+    border-spacing: 10px;
+    background: #bfdfff3f;
+}
+
+.degrees-info,
+.city-info,
+.date-info {
+    display: table-cell;
+}
+
+.city-info {
+    margin: 20px 50px;
+}
+
+.current-degrees-day,
+.current-time {
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.current-city {
+    font-weight: bold;
+    font-size: 25px;
+}
+
+.additional-info {
+    text-align: left;
+    margin-left: 30px;
+    margin-top: 15px;
+    font-weight: lighter;
+    font-size: 13px;
+}
+
+.five-days-after {
+    display: table;
+    margin: 40px auto;
+    width: 90%;
+}
+
+.frst-day,
+.snd-day,
+.thrd-day,
+.frth-day,
+.ffth-day {
+    display: table-cell;
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    transition: 200ms;
+}
+
+.frst-day:hover,
+.snd-day:hover,
+.thrd-day:hover,
+.frth-day:hover,
+.ffth-day:hover {
+    opacity: 1;
+    transform: scaleX(1) scaleY(1) translateY(-10%);
+    transition: 500ms;
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.next-day-name,
+.next-day-name2,
+.next-day-name3,
+.next-day-name4,
+.next-day-name5 {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.next-icon,
+.next-icon2,
+.next-icon3,
+.next-icon4,
+.next-icon5 {
+    font-size: 55px;
+}
+
+.learn-more {
+    position: relative;
+    padding: 10px;
+}
+
+button.btn-link {
+    text-decoration: none;
+    color: gray;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin: 10px;
+    color: #34495e;
+}
