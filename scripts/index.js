@@ -110,6 +110,34 @@ function getCurrentLoc(event) {
 let currentLocButton = document.querySelector("#current-button");
 currentLocButton.addEventListener("click", getCurrentLoc);
 
+function firstButtonCityWeather(event) {
+    event.preventDefault();
+    searchCity("kyiv");
+}
+let firstButtonCity = document.querySelector("#cityNameFirst");
+firstButtonCity.addEventListener("click", firstButtonCityWeather);
+
+function secondButtonCityWeather(event) {
+    event.preventDefault();
+    searchCity("zaporizhzhia");
+}
+let secondButtonCity = document.querySelector("#cityNameSecond");
+secondButtonCity.addEventListener("click", secondButtonCityWeather);
+
+function thirdButtonCityWeather(event) {
+    event.preventDefault();
+    searchCity("london");
+}
+let thirdButtonCity = document.querySelector("#cityNameThird");
+thirdButtonCity.addEventListener("click", thirdButtonCityWeather);
+
+function fourthButtonCityWeather(event) {
+    event.preventDefault();
+    searchCity("paris");
+}
+let fourthButtonCity = document.querySelector("#cityNameFourth");
+fourthButtonCity.addEventListener("click", fourthButtonCityWeather);
+
 searchCity("New York");
 
 function convertToF(event) {
