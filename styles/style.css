@@ -120,10 +120,16 @@ button.fa-button:before {
 
 .additional-info {
     text-align: left;
-    margin-left: 35px;
+    padding-left: 35px;
+    padding-right: 20px;
     margin-top: 15px;
     font-weight: lighter;
     font-size: 13px;
+    display: inline-flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    background: #c4e1ff3f;
 }
 
 .five-days-after {
@@ -131,6 +137,12 @@ button.fa-button:before {
     margin: 40px auto;
     width: 90%;
 }
+
+.description {
+    text-transform: capitalize;
+}
+
+.weatherIcon {}
 
 .frst-day,
 .snd-day,
