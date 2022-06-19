@@ -35,32 +35,37 @@
         </div>
         <div class="main-container">
             <div class="main-info">
-                <div class="box-info">
-                    <div class="degrees-info">
-                        <div class="current-degrees-day">
-                            <span class="temperature" id="temperature"></span>
-                            <span class="units"><a href="#" id="cel-link">°C</a>|<a href="#" id="far-link">°F</a>
+                <div class="this-day-weather-info">
+                    <div class="box-info">
+                        <div class="degrees-info">
+                            <div class="current-degrees-day">
+                                <span class="temperature" id="temperature"></span>
+                                <span class="units"><a href="#" id="celLink"
+                                    class="units-style active">°C</a> / <a href="#" id="farLink" class="units-style">°F</a>
                             </span>
+                            </div>
+                            <div class="current-degrees-night"><span id="night-temp"></span><span class="temperature-night"> <a href="#" id="celLinkNight"
+                                class="units-style active">°C</a> / <a href="#" id="farLinkNight" class="units-style">°F</a>
+                        </span></div>
                         </div>
-                        <div class="current-degrees-night"><span id="night-temp"></span> °C</div>
+                        <div class="city-info">
+                            <div class="current-city" id="current-city"></div>
+                            <div class="current-day" id="current-day"></div>
+                        </div>
+                        <div class="date-info">
+                            <div class="current-time" id="timeNow"></div>
+                            <div class="current-date" id="dateNow"></div>
+                        </div>
                     </div>
-                    <div class="city-info">
-                        <div class="current-city" id="current-city"></div>
-                        <div class="current-day" id="current-day"></div>
-                    </div>
-                    <div class="date-info">
-                        <div class="current-time" id="timeNow"></div>
-                        <div class="current-date" id="dateNow"></div>
-                    </div>
-                </div>
-                <div class="additional-info">
-                    <div class="text-info">
-                        <div class="humidity">Humidity: <span id="humidity"></span>%</div>
-                        <div class="wind">Wind: <span id="wind"></span>km/h</div>
-                        <div class="description" id="description"></div>
-                    </div>
-                    <div class="img-info">
-                        <img src="" id="weatherIcon" class="weather-icon"></img>
+                    <div class="additional-info">
+                        <div class="text-info">
+                            <div class="humidity">Humidity: <span id="humidity"></span>%</div>
+                            <div class="wind">Wind: <span id="wind"></span>km/h</div>
+                            <div class="description" id="description"></div>
+                        </div>
+                        <div class="img-info">
+                            <img src="" id="weatherIcon" class="weather-icon"></img>
+                        </div>
                     </div>
                 </div>
                 <div class="five-days-after">

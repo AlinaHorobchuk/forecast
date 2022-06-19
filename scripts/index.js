@@ -46,6 +46,8 @@ function displayWeatherCondition(response) {
     document.querySelector("#temperature").innerHTML = Math.round(
         response.data.main.temp
     );
+    celsiusTemperature = response.data.main.temp;
+    celsiusTemperatureNight = response.data.main.temp_min;
     document.querySelector("#humidity").innerHTML = response.data.main.humidity;
     document.querySelector("#description").innerHTML =
         response.data.weather[0].description;
@@ -75,6 +77,8 @@ function showTemperature(response) {
     let temperature = Math.round(response.data.main.temp);
     let currentCityTemp = document.querySelector("#temperature");
     let iconElement = document.querySelector("#weatherIcon");
+    celsiusTemperature = response.data.main.temp;
+    celsiusTemperatureNight = response.data.main.temp_min;
     currentCityTemp.innerHTML = `${temperature}`;
     document.querySelector("#current-city").innerHTML = response.data.name;
     document.querySelector("#humidity").innerHTML = response.data.main.humidity;
@@ -140,18 +144,46 @@ fourthButtonCity.addEventListener("click", fourthButtonCityWeather);
 
 searchCity("New York");
 
-function convertToF(event) {
+function convertToCel(event) {
     event.preventDefault();
-    let temperatureElement = document.querySelector("#temperature");
-    temperatureElement.innerHTML = 66;
+    farLink.classList.remove("active");
+    celLink.classList.add("active");
+    let tempElement = document.querySelector("#temperature");
+    tempElement.innerHTML = Math.round(celsiusTemperature);
 }
 
-function convertBackToCel(event) {
+function convertToFar(event) {
     event.preventDefault();
-    let temperatureElement = document.querySelector("#temperature");
-    temperatureElement.innerHTML = 19;
+    celLink.classList.remove("active");
+    farLink.classList.add("active");
+    let tempElement = document.querySelector("#temperature");
+    let farTemp = (celsiusTemperature * 9) / 5 + 32;
+    tempElement.innerHTML = Math.round(farTemp);
 }
-let farLink = document.querySelector("#far-link");
-farLink.addEventListener("click", convertToF);
-let celLink = document.querySelector("#cel-link");
-celLink.addEventListener("click", convertBackToCel);
+
+function convertToCelNight(event) {
+    event.preventDefault();
+    farLinkNight.classList.remove("active");
+    celLinkNight.classList.add("active");
+    let tempElement = document.querySelector("#night-temp");
+    tempElement.innerHTML = Math.round(celsiusTemperatureNight);
+}
+
+function convertToFarNight(event) {
+    event.preventDefault();
+    celLinkNight.classList.remove("active");
+    farLinkNight.classList.add("active");
+    let tempElement = document.querySelector("#night-temp");
+    let farTemp = (celsiusTemperatureNight * 9) / 5 + 32;
+    tempElement.innerHTML = Math.round(farTemp);
+}
+let celsiusTemperatureNight = null;
+let celsiusTemperature = null;
+let celLink = document.querySelector("#celLink");
+celLink.addEventListener("click", convertToCel);
+let farLink = document.querySelector("#farLink");
+farLink.addEventListener("click", convertToFar);
+let celLinkNight = document.querySelector("#celLinkNight");
+celLinkNight.addEventListener("click", convertToCelNight);
+let farLinkNight = document.querySelector("#farLinkNight");
+farLinkNight.addEventListener("click", convertToFarNight);
