@@ -46,8 +46,14 @@ function displayWeatherCondition(response) {
     document.querySelector("#temperature").innerHTML = Math.round(
         response.data.main.temp
     );
-    document.querySelector("#precipitation").innerHTML =
-        response.data.main.humidity;
+    document.querySelector("#humidity").innerHTML = response.data.main.humidity;
+    document.querySelector("#description").innerHTML =
+        response.data.weather[0].description;
+    let iconElement = document.querySelector("#weatherIcon");
+    iconElement.setAttribute(
+        "src",
+        `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+    );
     document.querySelector("#wind").innerHTML = Math.round(
         response.data.wind.speed
     );
@@ -65,17 +71,24 @@ let cityForm = document.querySelector("#city-input");
 cityForm.addEventListener("submit", inputCity);
 
 function showTemperature(response) {
+    console.log(response);
     let temperature = Math.round(response.data.main.temp);
     let currentCityTemp = document.querySelector("#temperature");
+    let iconElement = document.querySelector("#weatherIcon");
     currentCityTemp.innerHTML = `${temperature}`;
     document.querySelector("#current-city").innerHTML = response.data.name;
-    document.querySelector("#precipitation").innerHTML =
-        response.data.main.humidity;
+    document.querySelector("#humidity").innerHTML = response.data.main.humidity;
+    document.querySelector("#description").innerHTML =
+        response.data.weather[0].description;
     document.querySelector("#wind").innerHTML = Math.round(
         response.data.wind.speed
     );
     document.querySelector("#night-temp").innerHTML = Math.round(
         response.data.main.temp_min
+    );
+    iconElement.setAttribute(
+        "src",
+        `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
     );
 }
 
