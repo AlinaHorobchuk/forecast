@@ -93,8 +93,8 @@ button.fa-button:before {
     justify-content: space-between;
     align-items: center;
     width: 90%;
-    padding: 0 50px;
-    background: #bfdfff3f;
+    padding: 0 20px;
+    height: 90px;
 }
 
 .degrees-info,
@@ -113,6 +113,22 @@ button.fa-button:before {
     font-size: 20px;
 }
 
+a.units-style {
+    text-decoration: none;
+}
+
+.active {
+    color: #22313f;
+    cursor: default;
+    text-decoration: none;
+}
+
+.active:hover {
+    text-decoration: none;
+    color: #22313f;
+    cursor: default;
+}
+
 .current-city {
     font-weight: bold;
     font-size: 25px;
@@ -120,16 +136,21 @@ button.fa-button:before {
 
 .additional-info {
     text-align: left;
-    padding-left: 35px;
-    padding-right: 20px;
-    margin-top: 15px;
+    padding-left: 20px;
+    padding-right: 0;
     font-weight: lighter;
     font-size: 13px;
     display: inline-flex;
     justify-content: space-between;
     align-items: center;
     width: 90%;
-    background: #c4e1ff3f;
+    height: 90px;
+}
+
+.this-day-weather-info {
+    background: #bfdfff3f;
+    margin: 0 auto;
+    width: 90%;
 }
 
 .five-days-after {
@@ -141,8 +162,6 @@ button.fa-button:before {
 .description {
     text-transform: capitalize;
 }
-
-.weatherIcon {}
 
 .frst-day,
 .snd-day,
