@@ -1,6 +1,6 @@
 * {
     box-sizing: border-box;
-    color: #22313f;
+    color: #2f3a40;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
@@ -8,7 +8,7 @@
     width: 600px;
     display: block;
     margin: 50px auto;
-    background: #e4f1fe;
+    background: #c3b4a3;
     border: 1px solid grey;
     border-radius: 10px;
 }
@@ -47,7 +47,7 @@ input,
 input {
     width: 100%;
     height: 42px;
-    background: linear-gradient(to top, #dfe9f3 0%, white 100%);
+    background: linear-gradient(to top, #f0ece2 0%, white 100%);
     padding-left: 15px;
     box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
 }
@@ -123,9 +123,30 @@ a.units-style {
     text-decoration: none;
 }
 
+.inactive {
+    color: #a39b93;
+    cursor: default;
+    text-decoration: none;
+}
+
+.inactive:hover {
+    color: #a39b93;
+    cursor: default;
+    text-decoration: none;
+}
+
+.linkshover {
+    color: #77706a;
+}
+
+.linkshover:hover {
+    color: #22313f;
+    cursor: default;
+}
+
 .active:hover {
     text-decoration: none;
-    color: #22313f;
+    color: #2d2217;
     cursor: default;
 }
 
@@ -148,30 +169,32 @@ a.units-style {
 }
 
 .this-day-weather-info {
-    background: #bfdfff3f;
+    background: #dfd3c3;
     margin: 0 auto;
     width: 90%;
 }
 
 .five-days-after {
-    display: table;
+    display: inline-flex;
+    align-items: flex-start;
     margin: 40px auto;
-    width: 90%;
 }
 
 .description {
     text-transform: capitalize;
 }
 
-.frst-day,
-.snd-day,
-.thrd-day,
-.frth-day,
-.ffth-day {
-    display: table-cell;
+.frst-day {
     box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.2);
     padding: 20px;
     transition: 200ms;
+    width: 110px;
+    background: linear-gradient(to left, #dfd3c3 40%, rgba(250, 250, 250, 0));
+}
+
+.next-degrees-min {
+    color: gray;
+    font-size: 15px;
 }
 
 .frst-day:hover,
@@ -199,7 +222,7 @@ a.units-style {
 .next-icon3,
 .next-icon4,
 .next-icon5 {
-    font-size: 55px;
+    margin-left: -15px;
 }
 
 button.btn-link {

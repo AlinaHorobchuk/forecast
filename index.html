@@ -28,10 +28,6 @@
                     <button type="submit" class="fa-button"><i class="fa fa-search"></i></button>
                 </form>
             </div>
-            <div class="top-buttons">
-                <button class="icon-top-set"><i class="fa-solid fa-gear top-right-icon"></i></button>
-                <button class="icon-top-mes"><i class="fa-solid fa-message top-right-icon"></i></button>
-            </div>
         </div>
         <div class="main-container">
             <div class="main-info">
@@ -41,11 +37,11 @@
                             <div class="current-degrees-day">
                                 <span class="temperature" id="temperature"></span>
                                 <span class="units"><a href="#" id="celLink"
-                                    class="units-style active">°C</a> / <a href="#" id="farLink" class="units-style">°F</a>
+                                    class="units-style active">°C</a> | <a href="#" id="farLink" class="units-style inactive">°F</a>
                             </span>
                             </div>
                             <div class="current-degrees-night"><span id="night-temp"></span><span class="temperature-night"> <a href="#" id="celLinkNight"
-                                class="units-style active">°C</a> / <a href="#" id="farLinkNight" class="units-style">°F</a>
+                                class="units-style active">°C</a> | <a href="#" id="farLinkNight" class="units-style inactive">°F</a>
                         </span></div>
                         </div>
                         <div class="city-info">
@@ -68,40 +64,11 @@
                         </div>
                     </div>
                 </div>
-                <div class="five-days-after">
-                    <div class="frst-day">
-                        <div class="next-day-name">Thu</div>
-                        <div class="next-icon">☀️</div>
-                        <div class="next-degrees">21 °C</div>
-                    </div>
-                    <div class="snd-day">
-                        <div class="next-day-name2">Fri</div>
-                        <div class="next-icon2">🌤</div>
-                        <div class="next-degrees2">19 °C</div>
-                    </div>
-                    <div class="thrd-day">
-                        <div class="next-day-name3">Sat</div>
-                        <div class="next-icon3">⛈</div>
-                        <div class="next-degrees3">17 °C</div>
-                    </div>
-                    <div class="frth-day">
-                        <div class="next-day-name4">Sun</div>
-                        <div class="next-icon4">🌦</div>
-                        <div class="next-degrees4">18 °C</div>
-                    </div>
-                    <div class="ffth-day">
-                        <div class="next-day-name5">Mon</div>
-                        <div class="next-icon5">☀️</div>
-                        <div class="next-degrees5">20 °C</div>
-                    </div>
-                </div>
+                <div class="five-days-after" id="forecast"></div>
             </div>
         </div>
         <div class="footer">
-            <div class="github-netlify-info">Find this project on <a href="https://github.com/AlinaHorobchuk/forecast.git">GitHub</a> and <a href="https://peppy-biscochitos-b63078.netlify.app/">Netlify</a></div>
-            <div class="learn-more">
-                <button type="button" class="btn btn-link">Learn more <i class="fa-solid fa-arrow-right"></i></button>
-            </div>
+            <div class="github-netlify-info">Find this project on <a class="linkshover" href="https://github.com/AlinaHorobchuk/forecast.git">GitHub</a> and <a class="linkshover" href="https://peppy-biscochitos-b63078.netlify.app/">Netlify</a></div>
         </div>
     </div>
     <script src="/scripts/index.js"></script>

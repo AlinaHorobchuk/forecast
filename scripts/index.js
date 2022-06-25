@@ -62,6 +62,7 @@ function displayWeatherCondition(response) {
     document.querySelector("#night-temp").innerHTML = Math.round(
         response.data.main.temp_min
     );
+    getForecast(response.data.coord);
 }
 
 function inputCity(event) {
@@ -73,7 +74,6 @@ let cityForm = document.querySelector("#city-input");
 cityForm.addEventListener("submit", inputCity);
 
 function showTemperature(response) {
-    console.log(response);
     let temperature = Math.round(response.data.main.temp);
     let currentCityTemp = document.querySelector("#temperature");
     let iconElement = document.querySelector("#weatherIcon");
@@ -94,6 +94,43 @@ function showTemperature(response) {
         "src",
         `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
     );
+}
+
+function displayForecast(response) {
+    let forecast = response.data.daily;
+    let forecastElement = document.querySelector("#forecast");
+    let forecastHTML = ``;
+    forecast.forEach(function(forecastDay, index) {
+        if (index < 5) {
+            forecastHTML += `<div class="frst-day">
+        <div class="next-day-name">${formatForecastDay(forecastDay.dt)}</div>
+        <img class="next-icon" src="https://openweathermap.org/img/wn/${
+          forecastDay.weather[0].icon
+        }@2x.png"></img>
+        <div class="next-degrees-max">${Math.round(
+          forecastDay.temp.max
+        )} °C</div>
+        <div class="next-degrees-min">${Math.round(
+          forecastDay.temp.min
+        )} °C</div>
+    </div>`;
+        }
+    });
+    forecastElement.innerHTML = forecastHTML;
+}
+
+function getForecast(coordinates) {
+    console.log(coordinates);
+    let apiKey = "b60bafe697efece646b5e2470f53aa39";
+    let apiURL = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=metric`;
+    axios.get(apiURL).then(displayForecast);
+}
+
+function formatForecastDay(timesTape) {
+    let date = new Date(timesTape * 1000);
+    let day = date.getDay();
+    let daysForecast = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+    return daysForecast[day];
 }
 
 function searchLocation(position) {
@@ -148,6 +185,8 @@ function convertToCel(event) {
     event.preventDefault();
     farLink.classList.remove("active");
     celLink.classList.add("active");
+    celLink.classList.remove("inactive");
+    farLink.classList.add("inactive");
     let tempElement = document.querySelector("#temperature");
     tempElement.innerHTML = Math.round(celsiusTemperature);
 }
@@ -156,6 +195,8 @@ function convertToFar(event) {
     event.preventDefault();
     celLink.classList.remove("active");
     farLink.classList.add("active");
+    farLink.classList.remove("inactive");
+    celLink.classList.add("inactive");
     let tempElement = document.querySelector("#temperature");
     let farTemp = (celsiusTemperature * 9) / 5 + 32;
     tempElement.innerHTML = Math.round(farTemp);
@@ -165,6 +206,8 @@ function convertToCelNight(event) {
     event.preventDefault();
     farLinkNight.classList.remove("active");
     celLinkNight.classList.add("active");
+    celLinkNight.classList.remove("inactive");
+    farLinkNight.classList.add("inactive");
     let tempElement = document.querySelector("#night-temp");
     tempElement.innerHTML = Math.round(celsiusTemperatureNight);
 }
@@ -173,6 +216,8 @@ function convertToFarNight(event) {
     event.preventDefault();
     celLinkNight.classList.remove("active");
     farLinkNight.classList.add("active");
+    farLinkNight.classList.remove("inactive");
+    celLinkNight.classList.add("inactive");
     let tempElement = document.querySelector("#night-temp");
     let farTemp = (celsiusTemperatureNight * 9) / 5 + 32;
     tempElement.innerHTML = Math.round(farTemp);
