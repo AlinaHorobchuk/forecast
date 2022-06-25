@@ -119,7 +119,7 @@ a.units-style {
 }
 
 .active {
-    color: #22313f;
+    color: #113f67;
     cursor: default;
     text-decoration: none;
 }
@@ -170,7 +170,7 @@ a.units-style {
 }
 
 .this-day-weather-info {
-    background: #e7eaf6;
+    background: #d6dbf1;
     margin: 0 auto;
     width: 90%;
 }
@@ -190,7 +190,7 @@ a.units-style {
     padding: 20px;
     transition: 200ms;
     width: 110px;
-    background: linear-gradient(to left, #e7eaf6 40%, rgba(250, 250, 250, 0));
+    background: linear-gradient(to left, #d6dbf1 40%, rgba(250, 250, 250, 0));
 }
 
 .next-degrees-min {
@@ -231,8 +231,7 @@ a.units-style {
 
 button.btn-link {
     text-decoration: none;
-    color: gray;
-    color: #34495e;
+    color: #113f67;
     padding: 0;
 }
 
