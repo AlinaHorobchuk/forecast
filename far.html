@@ -35,10 +35,12 @@
                     <div class="box-info">
                         <div class="degrees-info">
                             <div class="current-degrees-day">
-                                <span class="temperature" id="temperature"></span>
-                                <span>°C</span>
+                                <span class="temperature" id="temperatureFar"></span>
+                                <span id="farLink" class="units-style inactive">°F</a>
+                            </span>
                             </div>
-                            <div class="current-degrees-night"><span id="night-temp"></span><span> °C</span></div>
+                            <div class="current-degrees-night"><span id="nightTempFar"></span><span id="farLinkNight" class="units-style inactive"> °F</a>
+                        </span></div>
                         </div>
                         <div class="city-info">
                             <div class="current-city" id="current-city"></div>
@@ -52,7 +54,7 @@
                     <div class="additional-info">
                         <div class="text-info">
                             <div class="humidity">Humidity: <span id="humidity"></span>%</div>
-                            <div class="wind">Wind: <span id="wind"></span>km/h</div>
+                            <div class="wind">Wind: <span id="wind"></span>m/h</div>
                             <div class="description" id="description"></div>
                         </div>
                         <div class="img-info">
@@ -60,12 +62,12 @@
                         </div>
                     </div>
                 </div>
-                <div class="five-days-after" id="forecast"></div>
+                <div class="five-days-after" id="forecastFar"></div>
             </div>
         </div>
         <div class="footer">
             <div class="github-netlify-info">Find this project on <a class="linkshover" href="https://github.com/AlinaHorobchuk/forecast.git">GitHub</a> and <a class="linkshover" href="https://peppy-biscochitos-b63078.netlify.app/">Netlify</a></div>
-            <a href="/far.html" class="linkshover">I need the weather in fahrenheit</a>
+            <a href="/index.html" class="linkshover">I need the weather in celsius</a>
         </div>
     </div>
     <script src="/scripts/index.js"></script>
