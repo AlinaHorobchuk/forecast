@@ -1,14 +1,15 @@
 * {
     box-sizing: border-box;
-    color: #2f3a40;
+    color: #113f67;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 .full-page {
     width: 600px;
+    height: 100%;
     display: block;
+    background: #a2a8d3;
     margin: 50px auto;
-    background: #c3b4a3;
     border: 1px solid grey;
     border-radius: 10px;
 }
@@ -47,7 +48,7 @@ input,
 input {
     width: 100%;
     height: 42px;
-    background: linear-gradient(to top, #f0ece2 0%, white 100%);
+    background: linear-gradient(to top, #a2a8d3 0%, white 100%);
     padding-left: 15px;
     box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
 }
@@ -124,29 +125,29 @@ a.units-style {
 }
 
 .inactive {
-    color: #a39b93;
+    color: #38598b;
     cursor: default;
     text-decoration: none;
 }
 
 .inactive:hover {
-    color: #a39b93;
+    color: #38598b;
     cursor: default;
     text-decoration: none;
 }
 
 .linkshover {
-    color: #77706a;
+    color: #38598b;
 }
 
 .linkshover:hover {
-    color: #22313f;
+    color: #38598b;
     cursor: default;
 }
 
 .active:hover {
     text-decoration: none;
-    color: #2d2217;
+    color: #38598b;
     cursor: default;
 }
 
@@ -169,7 +170,7 @@ a.units-style {
 }
 
 .this-day-weather-info {
-    background: #dfd3c3;
+    background: #e7eaf6;
     margin: 0 auto;
     width: 90%;
 }
@@ -189,7 +190,7 @@ a.units-style {
     padding: 20px;
     transition: 200ms;
     width: 110px;
-    background: linear-gradient(to left, #dfd3c3 40%, rgba(250, 250, 250, 0));
+    background: linear-gradient(to left, #e7eaf6 40%, rgba(250, 250, 250, 0));
 }
 
 .next-degrees-min {
@@ -208,6 +209,11 @@ a.units-style {
     box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.2);
 }
 
+.weather-icon {
+    width: 100px;
+    margin-top: -10px;
+}
+
 .next-day-name,
 .next-day-name2,
 .next-day-name3,
@@ -221,9 +227,7 @@ a.units-style {
 .next-icon2,
 .next-icon3,
 .next-icon4,
-.next-icon5 {
-    margin-left: -15px;
-}
+.next-icon5 {}
 
 button.btn-link {
     text-decoration: none;
