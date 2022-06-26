@@ -129,10 +129,10 @@ function displayForecast(response) {
         <img class="next-icon" src="/icons/${
           forecastDay.weather[0].icon
         }.svg"></img>
-        <div class="next-degrees-max">${Math.round(
+        <div class="next-degrees-max"><img class="temp-icon-day"src="/icons/thermometer-warmer.svg"></img>${Math.round(
           forecastDay.temp.max
         )} °C</div>
-        <div class="next-degrees-min">${Math.round(
+        <div class="next-degrees-min"><img class="temp-icon-night"src="/icons/thermometer-colder.svg">${Math.round(
           forecastDay.temp.min
         )} °C</div>
     </div>`;
@@ -152,10 +152,10 @@ function displayForecastFar(response) {
         <img class="next-icon" src="/icons/${
           forecastDay.weather[0].icon
         }.svg"></img>
-        <div class="next-degrees-max">${Math.round(
+        <div class="next-degrees-max"><img class="temp-icon-day"src="/icons/thermometer-warmer.svg">${Math.round(
           (forecastDay.temp.max * 9) / 5 + 32
         )} °C</div>
-        <div class="next-degrees-min">${Math.round(
+        <div class="next-degrees-min"><img class="temp-icon-day"src="/icons/thermometer-colder.svg">${Math.round(
           (forecastDay.temp.min * 9) / 5 + 32
         )} °C</div>
     </div>`;

@@ -1,14 +1,22 @@
 * {
     box-sizing: border-box;
-    color: #113f67;
+    color: black;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+body {
+    background-image: url(/img/photo-1500491460312-c32fc2dbc751.avif);
+    background-size: cover;
+    overflow: hidden;
+    min-height: 800px;
+    background-repeat: no-repeat;
 }
 
 .full-page {
     width: 600px;
     height: 100%;
     display: block;
-    background: #a2a8d3;
+    background: rgba(43, 43, 43, 0.3);
     margin: 50px auto;
     border: 1px solid grey;
     border-radius: 10px;
@@ -48,7 +56,7 @@ input,
 input {
     width: 100%;
     height: 42px;
-    background: linear-gradient(to top, #a2a8d3 0%, white 100%);
+    background: linear-gradient(to top, rgba(250, 250, 250, 0.9) 0%, rgba(250, 250, 250, 0.3) 100%);
     padding-left: 15px;
     box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
 }
@@ -119,29 +127,29 @@ a.units-style {
 }
 
 .active {
-    color: #113f67;
+    color: #343434;
     cursor: default;
     text-decoration: none;
 }
 
 .inactive {
-    color: #38598b;
+    color: #343434;
     cursor: default;
     text-decoration: none;
 }
 
 .inactive:hover {
-    color: #38598b;
+    color: #343434;
     cursor: default;
     text-decoration: none;
 }
 
 .linkshover {
-    color: #38598b;
+    color: #343434;
 }
 
 .linkshover:hover {
-    color: #38598b;
+    color: #343434;
     cursor: default;
 }
 
@@ -170,7 +178,7 @@ a.units-style {
 }
 
 .this-day-weather-info {
-    background: #d6dbf1;
+    background: rgba(250, 250, 250, 0.5);
     margin: 0 auto;
     width: 90%;
 }
@@ -190,11 +198,11 @@ a.units-style {
     padding: 20px;
     transition: 200ms;
     width: 110px;
-    background: linear-gradient(to left, #d6dbf1 40%, rgba(250, 250, 250, 0));
+    background: linear-gradient(to left, rgba(250, 250, 250, 0.5) 40%, rgba(250, 250, 250, 0));
 }
 
 .next-degrees-min {
-    color: gray;
+    color: rgb(81, 81, 81);
     font-size: 15px;
 }
 
@@ -231,7 +239,7 @@ a.units-style {
 
 button.btn-link {
     text-decoration: none;
-    color: #113f67;
+    color: #484848;
     padding: 0;
 }
 
@@ -241,4 +249,15 @@ button.btn-link {
     align-items: center;
     width: 88%;
     margin: -17px auto 20px auto;
+}
+
+.temp-icon-day,
+.temp-icon-night {
+    width: 40px;
+}
+
+.next-degrees-max,
+.next-degrees-min {
+    width: 80px;
+    margin-left: -10px;
 }
